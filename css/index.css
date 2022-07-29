@@ -1,0 +1,674 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 120px;
+    min-width: 1000px;
+    font-size: 14px;
+    overflow-x: hidden;
+    line-height: 1;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    background: none !important;
+    color: #333;
+    background-color: #F6F6F6;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    flex: 1;
+    list-style: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+}
+
+.logo img {
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+    margin-right: 38px;
+}
+
+.music_nav,
+.music_nav ul {
+    height: 100%;
+}
+
+.music_nav li {
+    height: 100%;
+    width: 92px;
+    cursor: pointer;
+    margin-right: 8px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 70px;
+    font-weight: 300;
+    opacity: 0.93;
+}
+
+.music_nav li:nth-child(6),
+.music_nav li:last-child {
+    margin-right: 0;
+}
+
+.music_nav li:hover {
+    opacity: 1;
+}
+
+.music_nav .headerNav_current {
+    color: #333333;
+    background-color: #FFE443;
+    font-weight: 600;
+}
+
+.showMoreBtn>span:first-child {
+    margin-right: 6px;
+}
+
+.showMoreBtn>span:last-child {
+    font-size: 12px;
+}
+
+.music_nav li:last-child {
+    position: relative;
+}
+
+.showMore {
+    position: absolute;
+    z-index: 999;
+    top: 55px;
+    left: -35px;
+    width: 170px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.showMore div {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 51px;
+}
+
+.showMore div:hover {
+    background-color: #FFDF1F;
+}
+
+.music_search>div {
+    display: flex;
+    width: 260px;
+    height: 34px;
+    padding-left: 12px;
+    background-color: #F5F5F5;
+}
+
+.music_search>div>span {
+    width: 20px;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #99A0BD;
+}
+
+input[type="search"] {
+    flex: 1;
+    border: none;
+    outline: #F5F5F5;
+    background-color: #F5F5F5;
+}
+
+input[type="search"]:focus {
+    border: none;
+}
+
+.user_login {
+    cursor: pointer;
+    margin-left: 19px;
+    font-size: 15px;
+}
+
+.top_nav {
+    margin-top: 25px;
+    padding-left: 195px;
+    margin-bottom: 80px;
+}
+
+.top_nav li {
+    position: relative;
+    float: left;
+    margin-right: 35px;
+    font-weight: 300;
+    opacity: 0.93;
+}
+
+.top_nav li:hover {
+    opacity: 1;
+}
+
+.top_nav_current {
+    font-weight: 600;
+}
+
+.top_nav_current::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFDF1F;
+}
+
+.swiper {
+    position: relative;
+}
+
+
+.carousel-indicators li {
+    background-color: hsla(0, 0%, 100%, .8);
+    width: 8px;
+    height: 8px;
+    margin-bottom: 32px;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active {
+    margin-bottom: 32px;
+    width: 8px;
+    height: 8px;
+    opacity: 0.9;
+}
+
+.carousel-control {
+    margin-top: 100px;
+    margin: 100px 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+}
+
+
+.carousel-control span::before {
+    line-height: 60px;
+    font-size: 28px;
+}
+
+.swiper_bottom>ul {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 16px;
+    z-index: 99;
+    background: rgba(0, 0, 0, .15);
+}
+
+.swiper_bottom>ul li {
+    text-align: center;
+}
+
+.swiper_bottom>ul li svg {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+}
+
+.article {
+    margin-top: 75px;
+}
+
+.songList_header ul {
+    width: 45%;
+}
+
+.songList_header li:first-child {
+    flex: 2;
+}
+
+.songList_header li {
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.songList_header .songList_current {
+    font-weight: 600;
+}
+
+.songList_header .songList_current::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 10px;
+    left: 22%;
+    content: '';
+    display: block;
+    width: 60%;
+    height: 5px;
+    background-color: #FFDF1F;
+}
+
+.songList_header h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.songList_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.songList_main::after {
+    content: "";
+    width: '';
+    height: 0;
+    display: block;
+}
+
+.songList_item {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.songList_item:last-child {
+    padding-right: 0;
+}
+
+.songList_item div {
+    position: relative;
+    overflow: hidden;
+}
+
+.songList_item img {
+    width: auto;
+    height: auto;
+    transition: all 0.5s;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.songList_item div::before {
+    position: absolute;
+    display: none;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4) url(/image/bfBG.png) no-repeat center;
+}
+
+.songList_item div:hover::before {
+    display: block;
+
+}
+
+.songList_item div:hover img {
+    transform: scale(1.1);
+}
+
+.songList_item h4 {
+    cursor: pointer;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.songList_item h4:hover {
+    font-weight: 600;
+}
+
+.songList_item p {
+    color: #999999;
+}
+
+.songList_item svg {
+    margin-right: 5px;
+}
+
+.rank_header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.rank_header h3 {
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+.rank_header span {
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 72px;
+    text-align: center;
+}
+
+.rank_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rank_main>div {
+    width: 18.85%;
+}
+
+.rankImg {
+    position: relative;
+    padding-bottom: 54.8%;
+    overflow: hidden;
+}
+
+.rankImg>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(46, 32, 60, .7);
+    z-index: 10;
+}
+
+.rankImg>div>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54.3%;
+    z-index: 10;
+}
+
+.rankImg>img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.rankImg span {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    right: 12px;
+    bottom: 12px;
+    z-index: 99;
+}
+
+.rankImg:hover span {
+    display: block;
+}
+
+.rank_main>div {
+    box-shadow: 0 0 30px 0 rgb(65 67 70 / 8%);
+}
+
+.rank_main>div>div:last-child>div {
+    margin-bottom: 30px;
+}
+
+.rank_main>div>div:last-child h3 {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rank_main>div>div:last-child h3:hover {
+    font-weight: 700;
+}
+
+.rank_main>div>div:last-child>div span {
+    margin-top: 5px;
+    cursor: pointer;
+    color: #ACACAC;
+}
+
+.rank_main>div>div:last-child>div span:hover {
+    font-weight: 700;
+}
+
+.rank_main>div>div:last-child>div {
+    display: flex;
+}
+
+.rank_main>div>div:last-child>div>div:first-child {
+    margin-right: 25px;
+    margin-left: 20px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.rank_main>div>div:last-child>div:nth-child(-n+5)>div:first-child {
+    width: 22px;
+}
+
+.rank_main>div>div:last-child>div:first-child>div:first-child {
+    background: url(/image/icon_first.df06fb1.png) center 25px no-repeat;
+    background-size: 168%;
+}
+
+.rank_main>div>div:last-child>div:nth-child(2)>div:first-child {
+    background: url(/image/icon_secondary.d99e73e.png) center 25px no-repeat;
+    background-size: 168%;
+}
+
+.rank_main>div>div:last-child>div:nth-child(3)>div:first-child {
+    background: url(/image/icon_third.8abbb65.png) center 25px no-repeat;
+    background-size: 168%;
+}
+
+.section_songer {
+    margin-bottom: 80px;
+}
+
+.songer_header {
+    display: flex;
+}
+
+.songer_header>h3 {
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+.songer_header ul {
+    width: 35%;
+}
+
+.songer_header li {
+    position: relative;
+}
+
+.songer_header span {
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 72px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.songer_header .songer_current {
+    font-weight: 700;
+}
+
+.songer_header .songer_current::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 28px;
+    left: 0;
+    content: "";
+    display: block;
+    width: 35%;
+    height: 5px;
+    background-color: rgb(255, 223, 31);
+}
+
+.songer_main {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.songer_main>div {
+    width: 15%;
+}
+
+
+.songer_main>div img {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 85%;
+}
+
+.songer_main>div>div:last-child {
+    width: 100%;
+}
+
+.songer_main>div>div:last-child h3 {
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transform: translateX(-7%);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.songer_main>div>div:last-child h3:hover {
+    font-weight: 600;
+}
+
+.songer_main>div>div:last-child p {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    transform: translateX(-7%);
+    color: #999999;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #282828;
+    width: 121%;
+    padding: 40px 120px;
+    transform: translateX(-8.5%);
+    height: 220px;
+    padding-bottom: 30px;
+}
+
+.footer>div:first-child p {
+    margin-top: 10px;
+    text-align: center;
+    transform: translateX(-30%);
+}
+
+.footer li:hover,
+.footer span:hover {
+    color: #FFE12C;
+}
+
+
+.footer>div:nth-child(-n+3) {
+    flex: 2;
+}
+
+.footer>div:nth-child(-n+3) ul {
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.footer>div:last-child {
+    flex: 1;
+}
+
+.footer>div:last-child li {
+    margin-bottom: 30px;
+}
+
+.footer>div:last-child ul {
+    flex-direction: column;
+}
+
+.footer h3 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.footer li {
+    cursor: pointer;
+    font-size: 13px;
+    color: #7A797A;
+}
+
+.footer span {
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 35px;
+    margin-right: 10px;
+    color: #7A797A;
+}
+
+.footer>div:nth-child(3)>div>p:last-child>span:nth-child(-n+2) {
+    display: inline-block;
+}
+
+.footer>div:nth-child(2)>div,
+.footer>div:nth-child(3)>div {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.footer>div:nth-child(2)>div {
+    width: 80%;
+}
+
+.footer>div:nth-child(3)>div {
+    width: 65%;
+}
+
+body .footer>div:nth-child(2)>p {
+    margin-right: 20px !important;
+}
